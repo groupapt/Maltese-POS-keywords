@@ -104,13 +104,24 @@ def get_words(text):
 	return text.split(' ')
 
 '''
+' Remove words starting with a digit from a list of word strings
+' @param list List of word strings
+' @return Resulting list
+'''
+def strip_digit_words(list):
+	for word in list:
+		if word != '' and re.match('[1-9]', word[0]):
+			list.remove(word)
+	return list
+
+'''
 ' Returns a key depending on the first character of the word passed
 ' @param word String representing a word
 ' @return Key representing the position of the word in word_dict
 '''
 def dict_key(word):
-	if re.match('[a-z]', word):
-		return word[0]
+	if re.match('[a-z, A-Z]', word):
+		return word[0].lower()
 	else:
 		return 'other'
 
@@ -126,7 +137,7 @@ def generate_keywords(text):
 	text = strip_matches(punctuation, text)
 	text = strip_matches(simple_words, text)
 
-	words = get_words(text)
+	words = strip_digit_words(get_words(text))
 
 	for word in words:
 		word_captured = word_found(word)
