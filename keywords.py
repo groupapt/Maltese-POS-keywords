@@ -5,9 +5,9 @@ from SOAPpy import SOAPProxy
 from operator import itemgetter
 
 '''
-' Diagnoses a piece of text and gives back the 5 most common keywords
+' Diagnoses a piece of text and gives back the top 5 keywords
 ' @param text Text to process
-' @return List of 5 Word objects representing the most common keywords
+' @return List of the common 5 common nouns
 '''
 
 
