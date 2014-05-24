@@ -9,6 +9,13 @@ projects, given that the license is respected and dependencies are available.
 
 SOAPpy is required, since it is used to access the tagger's [web service](http://metanet4u.research.um.edu.mt/services/MtPOS?wsdl).
 
+## Limitations
+
+Due to our reliance on the POS tagger web service, the generate_keywords() function may not always return the correct 
+result. The web service may not interpret a piece of text correctly if it does not form a valid sentence.
+
+However, the POS tagger could improve and we are ready to help its reachable team in any way possible.
+
 ## Implementation
 
 The module consists of a single function which sends a request to the service to send back the result of the 
@@ -24,7 +31,13 @@ Placeholder for list comprehension note!!!
 
 ### generate_keywords()
 
+#### Parameters
 
+* text: String to be examined
+
+#### Return value
+
+list of the 5 most frequantly used common nouns
 
 ### Example call
 
