@@ -14,7 +14,7 @@ SOAPpy is required, since it is used to access the tagger's [web service](http:/
 Due to our reliance on the POS tagger web service, the generate_keywords() function may not always return the correct 
 result. The web service may not interpret a piece of text correctly if it does not form a valid sentence.
 
-However, the POS tagger could improve and we are ready to help its reachable team in any way possible.
+However, the POS tagger could improve and I an ready to help its reachable team in any way possible.
 
 ## Implementation
 
@@ -22,10 +22,13 @@ The module consists of a single function which sends a request to the service to
 `` tagParagraphReturn() `` method which is then parsed accordingly and a list of common nouns is created. At this stage, 
 tags on the back of each are examined and removed, whilst only the words having the `` _NN `` token are retained.
 
-The function, then checks the occurance of every word, while storing it in a dictionary. Finally, a list containing the 5 
+The function, then checks the occurance of every word, while storing it in a dictionary. Finally, a list containing the 5
 most frequent keywords is returned.
 
-Placeholder for list comprehension note!!!
+List comprehensions have been used in order to simplify the extraction process.
+
+Furthermore, opting for the POS tagger has saved me time from maintaining a list of words to be ignored. (Prior, to integrating
+the POS tagger, this module did not make use of the tagger service, as commit messages suggest.)
 
 ## Usage
 
