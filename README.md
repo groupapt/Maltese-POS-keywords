@@ -14,7 +14,7 @@ SOAPpy is required, since it is used to access the tagger's [web service](http:/
 Due to our reliance on the POS tagger web service, the generate_keywords() function may not always return the correct 
 result. The web service may not interpret a piece of text correctly if it does not form a valid sentence.
 
-However, the POS tagger could improve and I an ready to help its reachable team in any way possible.
+However, the POS tagger could improve and I am ready to help its reachable team in any way possible.
 
 ## Implementation
 
@@ -32,7 +32,7 @@ the POS tagger, this module did not make use of the tagger service, as commit me
 
 ## Usage
 
-### generate_keywords()
+### generate_keywords(text)
 
 #### Parameters
 
